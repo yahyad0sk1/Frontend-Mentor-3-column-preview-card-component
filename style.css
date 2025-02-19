@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+/* font-family: "Lexend Deca", serif;
+font-family: "Big Shoulders Display", serif; */
+:root {
+    --column-1-color: hsl(31, 77%, 52%);
+    --column-2-color: hsl(184, 100%, 22%);
+    --column-3-color: hsl(179, 100%, 13%);
+    --paragraphs-color: hsla(0, 0%, 100%, 0.75);
+    --bhb-color: hsl(0, 0%, 95%);
+    --padding-for-columns: 54px;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bhb-color);
+    height: 100vh;
+    place-content: center;
+}
+p {
+    font-size: 15px;
+}
+.columns {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 950px;
+    overflow: hidden;
+}
+.columns .column-1 {
+    background-color: var(--column-1-color);
+    padding: var(--padding-for-columns);
+}
+.columns .column-2 {
+    background-color: var(--column-2-color);
+    padding: var(--padding-for-columns);
+}
+.columns .column-3 {
+    background-color: var(--column-3-color);
+    padding: var(--padding-for-columns);
+}
+.columns img {
+    margin-bottom: 30px;
+}
+.columns h1 {
+    color: var(--bhb-color);
+    font-family: "Big Shoulders Display", serif;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 2.4em;
+}
+.columns p {
+    color: var(--paragraphs-color);
+    font-family: "Lexend Deca", serif;
+    line-height: 1.7;
+    margin-bottom: 70px;
+}
+.columns button {
+    border: none;
+    font-family: "Lexend Deca", serif;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: var(--bhb-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.columns .btn-1 {
+    color: var(--column-1-color);
+}
+.columns .btn-2 {
+    color: var(--column-2-color);
+}
+.columns .btn-3 {
+    color: var(--column-3-color);
+}
+.columns button:hover {
+    color: var(--bhb-color);
+    background-color: transparent;
+    outline: 3px solid var(--bhb-color);
+}
+@media (max-width: 796px) {
+    body {
+        height: 100%;
+    }
+    .columns {
+        margin: 20px;
+        flex-direction: column;
+    }
+    .column-1,
+    .column-2,
+    .column-3 {
+        padding: 49px !important;
+    }
+    .columns p {
+        margin-bottom: 25px !important;
+    }
+}
